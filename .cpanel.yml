@@ -1,0 +1,23 @@
+---
+deployment:
+  tasks:
+    # Set the deployment path to your public_html or subdirectory
+    - export DEPLOYPATH=/home/elysian-beauty/public_html/
+    
+    # Deploy the .output directory (Nuxt 3 build output)
+    - /bin/cp -R .output $DEPLOYPATH
+    
+    # Deploy static assets
+    - /bin/cp -R public $DEPLOYPATH
+    
+    # Deploy the nuxt.config.ts file
+    - /bin/cp nuxt.config.ts $DEPLOYPATH
+    
+    # Deploy package.json for production dependencies
+    - /bin/cp package.json $DEPLOYPATH
+    
+    # Deploy yarn.lock to ensure consistent dependencies
+    - /bin/cp yarn.lock $DEPLOYPATH
+    
+    # Set proper permissions (optional but recommended)
+    - /bin/chmod -R 755 $DEPLOYPATH/.output
