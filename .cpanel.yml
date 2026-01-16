@@ -2,7 +2,7 @@
 deployment:
   tasks:
     # Set the deployment path to your public_html or subdirectory
-    - export DEPLOYPATH=/home/elysian-beauty/public_html/
+    - export DEPLOYPATH=/home/elysgohr/public_html/
     
     # Deploy the .output directory (Nuxt 3 build output)
     - /bin/cp -R .output $DEPLOYPATH
