@@ -1,6 +1,5 @@
----
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/yourusername/elysian-beauty.org/
+    - export DEPLOYPATH=/home/yourusername/staging.elysian-beauty.org/
     - /bin/cp -R * $DEPLOYPATH
     - /bin/cp -R .htaccess $DEPLOYPATH 2>/dev/null || true
